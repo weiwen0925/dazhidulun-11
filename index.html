@@ -232,7 +232,7 @@ body{font-size:20px!important;}
 .site-footer,.site-footer p{font-size:15px!important;}
 </style>
 
-<meta name="wy-full-protection" content="v2-blank">
+<meta name="wy-full-protection" content="v3-blank">
 <meta name="robots" content="noai, noimageai, noarchive, noindex">
 <meta name="googlebot" content="noai, noimageai, noindex">
 <meta name="bingbot" content="noai, noindex">
@@ -1453,8 +1453,6 @@ h5{font-size:18.5px!important;}
       if(navigator.webdriver === true) return true;
       var ua = navigator.userAgent || "";
       if(/HeadlessChrome|PhantomJS|Selenium|puppeteer|Playwright|electron/i.test(ua)) return true;
-      // 無 plugins、無 languages 也是 headless 強指紋
-      if((navigator.languages && navigator.languages.length === 0)) return true;
     }catch(_e){}
     return false;
   }
@@ -1474,37 +1472,48 @@ h5{font-size:18.5px!important;}
   }
   if(!_originOK()){ _lockdown('origin'); return; }
 
-  // ── L6 · 線上活性 HEAD ping ──
+  // ── 同步檢查通過 → 立即 reveal，避免被任何網路抽風卡死 ──
+  window.__wyOriginOK = true;
+  function _reveal(){
+    var pg = document.getElementById('wy-preguard');
+    if(pg && pg.parentNode) pg.parentNode.removeChild(pg);
+    document.documentElement.style.visibility = 'visible';
+    try{ _ready_resolve && _ready_resolve(true); }catch(_e){}
+  }
+  // 不論 fresh ness 結果如何，先 reveal；freshness 失敗才 lockdown
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', _reveal, {once:true});
+  } else {
+    _reveal();
+  }
+
+  // ── L6 · 線上活性 Image probe（比 fetch HEAD 穩定，避免 no-cors 卡死） ──
   function _freshness(){
     return new Promise(function(resolve, reject){
-      var url = location.protocol + "//" + ALLOWED_HOST + ALLOWED_PATH
-              + "?_wyping=" + Date.now() + "." + Math.random().toString(36).slice(2);
       var done = false;
-      var to = setTimeout(function(){ if(done) return; done = true; reject('timeout'); }, 6000);
+      var url = location.protocol + "//" + ALLOWED_HOST + ALLOWED_PATH
+              + "favicon.ico?_wyping=" + Date.now() + "." + Math.random().toString(36).slice(2);
+      var to = setTimeout(function(){
+        if(done) return; done = true; reject('timeout');
+      }, 4000);
       try{
-        fetch(url, {method:'HEAD', cache:'no-store', credentials:'omit', mode:'no-cors'})
-          .then(function(){
-            if(done) return; done = true; clearTimeout(to); resolve();
-          })
-          .catch(function(err){
-            if(done) return; done = true; clearTimeout(to); reject(err);
-          });
+        var img = new Image();
+        img.onload  = function(){ if(done) return; done = true; clearTimeout(to); resolve(); };
+        img.onerror = function(){
+          // 即使 404 也代表「網路有回應」→ 同樣視為通過
+          if(done) return; done = true; clearTimeout(to); resolve();
+        };
+        img.src = url;
       }catch(e){
         if(done) return; done = true; clearTimeout(to); reject(e);
       }
     });
   }
 
-  _freshness().then(function(){
-    window.__wyOriginOK = true;
-    // 解除 pre-guard，顯示頁面
-    var pg = document.getElementById('wy-preguard');
-    if(pg && pg.parentNode) pg.parentNode.removeChild(pg);
-    document.documentElement.style.visibility = 'visible';
-    try{ _ready_resolve && _ready_resolve(true); }catch(_e){}
-  }).catch(function(){
-    _lockdown('freshness');
-  });
+  // 背景跑 freshness：失敗（webarchive / 完全離線）才 lockdown
+  setTimeout(function(){
+    _freshness().catch(function(){ _lockdown('freshness'); });
+  }, 800);
 
   // ── L2 · 攔截 ⌘P/Ctrl+P + 覆寫 window.print ──
   try{
