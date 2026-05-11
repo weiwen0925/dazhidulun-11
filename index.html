@@ -232,7 +232,7 @@ body{font-size:20px!important;}
 .site-footer,.site-footer p{font-size:15px!important;}
 </style>
 
-<meta name="wy-full-protection" content="v3-blank">
+<meta name="wy-full-protection" content="v4-blank">
 <meta name="robots" content="noai, noimageai, noarchive, noindex">
 <meta name="googlebot" content="noai, noimageai, noindex">
 <meta name="bingbot" content="noai, noindex">
@@ -1462,7 +1462,10 @@ h5{font-size:18.5px!important;}
   function _originOK(){
     try{
       var h = location.hostname || "";
-      var p = location.pathname || "";
+      var p = location.pathname || "/";
+      // GitHub Pages 會把 "/dazhidulun-11/" 30x 重導到 "/dazhidulun-11"（無尾斜線），
+      // 修法：比對前統一補上尾斜線（"/foo" → "/foo/"，"/foo/" 仍是 "/foo/"）
+      if(p.charAt(p.length - 1) !== '/') p = p + '/';
       if(h !== ALLOWED_HOST) return false;
       if(p.indexOf(ALLOWED_PATH) !== 0) return false;
       // 必須 https
