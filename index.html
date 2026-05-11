@@ -6,6 +6,8 @@ document.documentElement.classList.add('wy-preguard');
 
 
 
+
+
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大智度論 · 卷十一 · 全七品彙整</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"><style>
 :root{
   --bg:#f7f3ec;--text:#2c2416;--text2:#5a4e3a;--text-muted:#6B5B4B;
@@ -319,7 +321,9 @@ h5{font-size:18.5px!important;}
 
 
 
-<meta name="robots" content="noai,noimageai,noarchive,noindex,nofollow"><meta name="googlebot" content="noai,noimageai,noindex"><meta name="bingbot" content="noai,noimageai,noindex"><meta name="ChatGPT-User" content="noai"><meta name="CCBot" content="nofollow"><meta name="wy-full-protection" content="v3-blank">
+
+
+<meta name="robots" content="noai,noimageai,noarchive,noindex,nofollow"><meta name="googlebot" content="noai,noimageai,noindex"><meta name="bingbot" content="noai,noimageai,noindex"><meta name="ChatGPT-User" content="noai"><meta name="CCBot" content="nofollow"><meta name="wy-full-protection" content="v4-blank">
 <style id="wy-protection-css">
 /* Pre-guard：未通過 L4/L6 之前完全空白 */
 html.wy-preguard, html.wy-preguard body { visibility: hidden !important; background:#fff !important; }
@@ -1654,6 +1658,7 @@ h5{font-size:18.5px!important;}
 })();
 </script>
 
+
 <script id="wy-main-protection">
 (function(){
   'use strict';
@@ -1721,28 +1726,16 @@ h5{font-size:18.5px!important;}
   // window.__wyReady 仍提供給其他模組
   window.__wyReady = Promise.resolve(true);
 
-  // ── L6 · 背景線上活性 ping（失敗才空白；不阻擋首畫面）──
+  // ── L6 · 背景線上活性 ping（純探測，絕不空白；保留 L6 層級的標記）──
   function bgPing(){
     try{
       var url = FRESH_URL + '?_wyping=' + Date.now() + '.' + Math.random().toString(36).slice(2);
-      var ctl = (typeof AbortController!=='undefined') ? new AbortController() : null;
-      var t = setTimeout(function(){ if(ctl) ctl.abort(); }, PING_TIMEOUT);
-      fetch(url, {
-        method:'GET', cache:'no-store', mode:'no-cors', credentials:'omit',
-        signal: ctl ? ctl.signal : undefined
-      }).then(function(){ clearTimeout(t); /* OK */ })
-       .catch(function(err){
-         clearTimeout(t);
-         // 只有在「主機名／路徑符合但連線真的失敗」的離線情境才空白
-         if(!navigator.onLine){ blank(); }
-         else if(err && err.name === 'AbortError'){ /* timeout，不空白 */ }
-         // 其他 fetch 失敗（如 DNS / network error）才空白
-         else { blank(); }
-       });
-    }catch(e){}
+      fetch(url, { method:'GET', cache:'no-store', mode:'no-cors', credentials:'omit' })
+        .then(function(){ window.__wyPing = 'ok'; })
+        .catch(function(){ window.__wyPing = 'fail'; /* 故意不空白 */ });
+    }catch(e){ window.__wyPing = 'err'; }
   }
-  // 延遲 800ms 跑背景 ping，確保首畫面已穩定
-  setTimeout(bgPing, 800);
+  setTimeout(bgPing, 1500);
 
   // ── L2 · 列印攔截 ──
   try{ window.print = function(){ /* no-op */ }; }catch(e){}
@@ -1776,9 +1769,7 @@ h5{font-size:18.5px!important;}
       else if(mq.addListener) mq.addListener(function(ev){ if(ev.matches) wipeForPrint(); else restoreFromPrint(); });
     }
   }catch(e){}
-  setInterval(function(){
-    try{ if(window.matchMedia && window.matchMedia('print').matches){ wipeForPrint(); } }catch(e){}
-  }, 200);
+  // 200ms 輪詢已移除，避免在某些瀏覽器／擴充情境下誤判為 print mode
 
   // ── 右鍵 / 拖曳防護加固 ──
   ['contextmenu','dragstart','selectstart','copy','cut'].forEach(function(ev){
