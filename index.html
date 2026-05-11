@@ -232,7 +232,7 @@ body{font-size:20px!important;}
 .site-footer,.site-footer p{font-size:15px!important;}
 </style>
 
-<meta name="wy-full-protection" content="v5-blank">
+<meta name="wy-full-protection" content="v6-blank">
 <meta name="robots" content="noai, noimageai, noarchive, noindex">
 <meta name="googlebot" content="noai, noimageai, noindex">
 <meta name="bingbot" content="noai, noindex">
@@ -1500,33 +1500,16 @@ h5{font-size:18.5px!important;}
     _reveal();
   }
 
-  // ── L6 · 線上活性 Image probe（比 fetch HEAD 穩定，避免 no-cors 卡死） ──
-  function _freshness(){
-    return new Promise(function(resolve, reject){
-      var done = false;
-      var url = location.protocol + "//" + ALLOWED_HOST + ALLOWED_PATH
-              + "favicon.ico?_wyping=" + Date.now() + "." + Math.random().toString(36).slice(2);
-      var to = setTimeout(function(){
-        if(done) return; done = true; reject('timeout');
-      }, 4000);
-      try{
-        var img = new Image();
-        img.onload  = function(){ if(done) return; done = true; clearTimeout(to); resolve(); };
-        img.onerror = function(){
-          // 即使 404 也代表「網路有回應」→ 同樣視為通過
-          if(done) return; done = true; clearTimeout(to); resolve();
-        };
-        img.src = url;
-      }catch(e){
-        if(done) return; done = true; clearTimeout(to); reject(e);
-      }
-    });
-  }
-
-  // 背景跑 freshness：失敗（webarchive / 完全離線）才 lockdown
-  setTimeout(function(){
-    _freshness().catch(function(){ _lockdown('freshness'); });
-  }, 800);
+  // ── L6 · 線上活性 silent log（v6：不再 lockdown，避免 image probe 卡 timeout 殺死頁面）──
+  // 原本的 image probe 在某些 Chrome 版本對 GitHub Pages 的 favicon redirect 既不 fire onload
+  // 也不 fire onerror，4 秒 timeout 後誤觸發 _lockdown，導致正常頁面被清空。
+  // L4 origin lock（hostname + path + https）已足夠擋 file:// / webarchive / 其他 host 鏡像，
+  // 因此 v6 起 _freshness 僅作非阻塞 silent 記錄，不再導致 lockdown。
+  try{
+    var _probeImg = new Image();
+    _probeImg.src = location.protocol + "//" + ALLOWED_HOST + ALLOWED_PATH
+                  + "?_wyping=" + Date.now();
+  }catch(_e){}
 
   // ── L2 · 攔截 ⌘P/Ctrl+P + 覆寫 window.print ──
   try{
