@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ================================================================
+       大智度論 · 卷十一 · 全品彙整 · Sitemap
+       Generated for Google / Bing Search Console submission
+       ================================================================ -->
+
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 七品深連結（hash fragment 形式；Google 渲染後可發現對應 anchor） -->
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-1</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-2</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-3</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-4</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-5</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-6</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://weiwen0925.github.io/dazhidulun-11/#chapter-7</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>
