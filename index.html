@@ -1062,5 +1062,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C11P3:END-->
+<!--WY-C11P4:BEGIN-->
+<style id="wy-c11p4-css">
+.c11p4-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c11p4-fabbox.show{display:block;}
+.c11p4-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c11p4-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c11p4-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c11p4-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c11p4-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c11p4-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c11p4-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c11p4-modal.open{display:flex;}
+.c11p4-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c11p4-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c11p4-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c11p4-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c11p4-close:hover{background:#e3d5b8;}
+.c11p4-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c11p4-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c11p4-tbl th,.c11p4-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c11p4-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c11p4-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c11p4-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c11p4-tbl b{color:#8b2500;}
+.c11p4-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c11p4-note b{color:#8b2500;}
+@media(max-width:900px){.c11p4-fabbox{right:14px;}.c11p4-tbl{font-size:11.5px;}.c11p4-card{padding:26px 14px 16px;}}
+</style>
+<div class="c11p4-fabbox" id="c11p4Box"><button class="c11p4-btn" id="c11p4Btn" type="button" aria-label="開啟全景總表"><span class="c11p4-ic">▦</span><span class="c11p4-ls"><span class="c11p4-l1">本品 · 般若實相義門</span><span class="c11p4-l2">不住法住 · 五階辯證</span></span></button></div><div class="c11p4-modal" id="c11p4Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c11p4-card"><button class="c11p4-close" id="c11p4Close" type="button" aria-label="關閉">×</button><h3>卷十一·第四品 般若波羅蜜實相義門 · 全景總表</h3><p class="sub">卷十一・第四品｜不住法住・無漏慧根・相似無漏・微細法執・破而不立・誓願動力</p><table class="c11p4-tbl"><caption>一、經文密碼與五階辯證（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>經文密碼</td><td>「<b>以不住法住般若波羅蜜中，以無所捨法具足檀波羅蜜，施者受者及財物不可得故</b>」——「不住法」卻「住般若」、「無所捨」卻「具足檀」的雙重張力</td></tr><tr><td>命題一·定義</td><td>般若波羅蜜是何等法？先立「<b>無漏慧根</b>」說，穩住體相層次（第一義空名無漏）</td></tr><tr><td>命題二·行者</td><td>菩薩未斷結，云何得行無漏慧？以「相似無漏」搭橋——凡聖之間出現通路（帶業修行）</td></tr><tr><td>命題三·證境</td><td>若斷結清淨，復何以行般若？揭示清淨之後的隱形陷阱——「微細法執」這層粗結</td></tr><tr><td>命題四·真理</td><td>諸說紛紜何者為實？「各各有理／末後答者為實」雙軌收束，破而不立、止息戲論</td></tr><tr><td>命題五·實踐</td><td>若心無所著，動力從何而來？答曰「<b>菩薩憐愍眾生，先立誓願</b>」——誓願是空與行之間的橋樑</td></tr></tbody></table><table class="c11p4-tbl"><caption>二、凡聖矛盾與清淨陷阱（命題二·三）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>相似無漏</td><td>菩薩未斷結使卻能行無漏慧——以「相似無漏」為過渡橋樑，凡夫位亦可「以似引真」帶業修行</td></tr><tr><td>二諦圓融</td><td>世俗諦上未斷結、勝義諦上相應無漏；凡聖不是斷裂，而是同一道上的深淺相續</td></tr><tr><td>粗細二結</td><td>清淨之後仍有「微細法執」——比粗煩惱更難覺察的隱形陷阱（阿泥盧豆案例、須彌山與毘藍風喻）</td></tr><tr><td>不可觸火</td><td>以「不可觸摸的火焰」喻——般若可近而不可執，一執即傷；微細法執正是執取般若相所生</td></tr><tr><td>破執層遞</td><td>由「未斷結之疑」到「已清淨之陷阱」，論主層層揭示：越接近般若，越須警覺最微細的法執</td></tr></tbody></table><table class="c11p4-tbl"><caption>三、詮釋兩難與誓願動力（命題四·五）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>法無定法</td><td>面對眾多互相矛盾的定義，論主以「法無定法、毫釐不受」收束——如轉輪聖王不與人諍而自然不敗</td></tr><tr><td>破而不立</td><td>「各各有理，末後答者為實」——不執任一定義為究竟，以止息戲論的方式安立般若實相</td></tr><tr><td>不住法住</td><td>雙重否定「不住（不執取）而住（安住般若）」——空與行不是矛盾，是同一實相的兩面</td></tr><tr><td>悲智雙運</td><td>動力引擎在「憐愍眾生、先立誓願」——真空妙有的走索者，以誓願平衡空慧與大行</td></tr><tr><td>三者不可得</td><td>「施者、受者、財物不可得」為鑰匙——以無所住而具足六度，統攝整個菩薩行門</td></tr></tbody></table><p class="c11p4-note">第四品以「不住法住」四字為軸，展開五輪環環相扣的辯證：從定義般若（無漏慧根），到凡聖矛盾（相似無漏），到清淨陷阱（微細法執），到詮釋兩難（破而不立），最終落在動力之問——既然無所著，行門動力從何而來？龍樹的答案是<b>誓願</b>。空與行從不矛盾，「不住法」與「住般若」在誓願的橋樑上圓融無礙——這正是真空妙有的菩薩走索之道。</p></div></div>
+<script id="wy-c11p4-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c11p4Btn"),BOX=document.getElementById("c11p4Box"),MODAL=document.getElementById("c11p4Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=3;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#videoFab,.video-fab,#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c11p4Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C11P4:END-->
 </body>
 </html>
