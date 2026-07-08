@@ -1009,5 +1009,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C11P2:END-->
+<!--WY-C11P3:BEGIN-->
+<style id="wy-c11p3-css">
+.c11p3-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c11p3-fabbox.show{display:block;}
+.c11p3-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c11p3-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c11p3-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c11p3-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c11p3-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c11p3-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c11p3-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c11p3-modal.open{display:flex;}
+.c11p3-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c11p3-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c11p3-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c11p3-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c11p3-close:hover{background:#e3d5b8;}
+.c11p3-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c11p3-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c11p3-tbl th,.c11p3-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c11p3-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c11p3-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c11p3-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c11p3-tbl b{color:#8b2500;}
+.c11p3-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c11p3-note b{color:#8b2500;}
+@media(max-width:900px){.c11p3-fabbox{right:14px;}.c11p3-tbl{font-size:11.5px;}.c11p3-card{padding:26px 14px 16px;}}
+</style>
+<div class="c11p3-fabbox" id="c11p3Box"><button class="c11p3-btn" id="c11p3Btn" type="button" aria-label="開啟全景總表"><span class="c11p3-ic">▦</span><span class="c11p3-ls"><span class="c11p3-l1">本品 · 舍利弗問緣·鴿子因緣</span><span class="c11p3-l2">全知者為何沉默 · 智慧位階</span></span></button></div><div class="c11p3-modal" id="c11p3Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c11p3-card"><button class="c11p3-close" id="c11p3Close" type="button" aria-label="關閉">×</button><h3>卷十一·第三品 舍利弗問緣與鴿子因緣 · 全景總表</h3><p class="sub">卷十一・第三品｜佛何以不即說般若・鷹逐鴿・影不覆・斷惑深淺・觀測邊界・除習謙卑</p><table class="c11p3-tbl"><caption>一、核心叩問與三層邏輯（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>核心叩問</td><td>佛既已現神變，「<b>何以不即說般若，反令舍利弗先問</b>」？——全知者為何沉默？一則叩問接引整個般若教學的核心命題</td></tr><tr><td>表層·儀軌</td><td>世俗層的說法儀軌——佛令弟子啟請、以問答帶出般若，是傳法的形式因緣</td></tr><tr><td>中層·認識論</td><td>聲聞極智與佛智在「觀測邊界」上的維度差異——同觀一鴿，所見時空深度天差地別</td></tr><tr><td>深層·位階</td><td>斷惑深淺決定智慧位階——本體論上聲聞斷惑未盡、習氣猶存，與佛的究竟圓滿不可彌合</td></tr><tr><td>一鳥法界</td><td>龍樹不以神話論證般若，而藉一隻陰影下戰慄的飛鳥撬開中觀宇宙——「<b>一鳥之本末，即是法界之全貌</b>」</td></tr></tbody></table><table class="c11p3-tbl"><caption>二、鴿子因緣·全知視野的壓力測試</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>鷹逐鴿</td><td>《阿婆檀那經》載鷹逐鴿，鴿飛至佛影下即安隱不怖、飛至舍利弗影下猶戰慄——影之覆護不同，顯二者證量懸殊</td></tr><tr><td>影不能覆</td><td>舍利弗雖阿羅漢、智慧第一，其影仍不能除鴿之怖畏——聲聞極智仍有「觀測邊界」，未達究竟</td></tr><tr><td>時間極限</td><td>舍利弗以宿命智觀鴿前世作鴿之始、以天眼觀後世脫鴿之終，皆不能盡；佛則遍知其八萬大劫前後因緣</td></tr><tr><td>全知視野</td><td>唯佛能盡鴿之來際去際——智慧位階的差異不在有無神通，而在觀測時空的「維度」深淺</td></tr><tr><td>震撼懺悔</td><td>舍利弗自知不及，於佛前生大慚愧、震撼懺悔——聖者的謙卑正是位階自覺的體現</td></tr></tbody></table><table class="c11p3-tbl"><caption>三、中觀重構與修行閉環</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>斷惑深淺</td><td>本體論之辨——聲聞斷「見思惑」而習氣未除、佛則習氣俱盡；斷惑的徹底度決定智慧的邊界</td></tr><tr><td>真理維度</td><td>認識論之辨——同一鴿身，聲聞見有限時空、佛見無盡因緣；差別非量的多寡而是「維度」之別</td></tr><tr><td>以中論重構</td><td>緣起性空故習氣可轉、時間邊界可破、微觀（一鴿）通宏觀（法界）——四句口訣提煉中觀心法</td></tr><tr><td>除習謙卑</td><td>修行心法：除習氣、存謙卑、發長遠心——聖果非終點，佛地方究竟</td></tr><tr><td>邏輯閉環</td><td>末章回扣初始叩問「佛為何等待提問」——正因智慧位階有別，佛以問答次第引眾生漸入般若，此即沉默的深意</td></tr></tbody></table><p class="c11p3-note">本品以「全知者為何沉默」的叩問開篇，藉一則鷹逐鴿公案，精準呈現聲聞極智與佛智在本體論（斷惑深淺）與認識論（觀測邊界）上無法彌合的落差。舍利弗雖智慧第一，其影仍不能除鴿之怖畏、其智仍不能盡鴿之來去際——這不是貶抑聲聞，而是揭示<b>智慧位階的維度差異</b>。龍樹藉最微細的飛鳥撬開中觀的無垠宇宙：一鳥之本末，即是法界之全貌。</p></div></div>
+<script id="wy-c11p3-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c11p3Btn"),BOX=document.getElementById("c11p3Box"),MODAL=document.getElementById("c11p3Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=2;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#videoFab,.video-fab,#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c11p3Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C11P3:END-->
 </body>
 </html>
