@@ -1168,5 +1168,58 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-C11P5:END-->
+<!--WY-C11P6:BEGIN-->
+<style id="wy-c11p6-css">
+.c11p6-fabbox{position:fixed;right:22px;bottom:78px;z-index:121;display:none;}
+.c11p6-fabbox.show{display:block;}
+.c11p6-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#573f38,#2e2420);padding:8px 15px;border-radius:22px;border:1px solid rgba(184,134,11,.6);box-shadow:0 4px 16px rgba(0,0,0,.3);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.c11p6-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(184,134,11,.5);}
+.c11p6-ic{font-size:15px;line-height:1;color:#ecc978;}
+.c11p6-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.c11p6-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.c11p6-l2{font-size:13px;font-weight:700;color:#faf1d8;white-space:nowrap;}
+.c11p6-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(28,20,12,.58);padding:16px;}
+.c11p6-modal.open{display:flex;}
+.c11p6-card{position:relative;background:#fbf7ee;max-width:900px;width:100%;max-height:88vh;overflow:auto;border:1px solid #d8c8ac;border-radius:14px;padding:30px 24px 22px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.c11p6-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#8b5e3c;}
+.c11p6-card .sub{margin:0 0 14px;font-family:"Noto Sans TC",sans-serif;font-size:13px;color:#6b5b4b;}
+.c11p6-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#efe6d4;color:#8b5e3c;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.c11p6-close:hover{background:#e3d5b8;}
+.c11p6-tbl{width:100%;border-collapse:collapse;font-family:"Noto Sans TC",sans-serif;font-size:13px;margin:.3em 0 1.2em;}
+.c11p6-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#8b5e3c;font-size:14.5px;text-align:left;margin:.6em 0 .35em;line-height:1.5;}
+.c11p6-tbl th,.c11p6-tbl td{border:1px solid #d8c8ac;padding:.45em .6em;text-align:left;vertical-align:top;line-height:1.6;}
+.c11p6-tbl thead th{background:#8b5e3c;color:#f7ecd2;font-weight:700;}
+.c11p6-tbl td:first-child{white-space:nowrap;color:#8b5e3c;font-weight:700;background:#f0e8d8;}
+.c11p6-tbl tbody tr:nth-child(even) td{background:#f6efe0;}
+.c11p6-tbl b{color:#8b2500;}
+.c11p6-note{font-size:12px;color:#5a4e3a;line-height:1.9;background:#f6efe0;border-left:3px solid #c4956a;border-radius:0 6px 6px 0;padding:10px 13px;margin:4px 0 0;}
+.c11p6-note b{color:#8b2500;}
+@media(max-width:900px){.c11p6-fabbox{right:14px;}.c11p6-tbl{font-size:11.5px;}.c11p6-card{padding:26px 14px 16px;}}
+</style>
+<div class="c11p6-fabbox" id="c11p6Box"><button class="c11p6-btn" id="c11p6Btn" type="button" aria-label="開啟全景總表"><span class="c11p6-ic">▦</span><span class="c11p6-ls"><span class="c11p6-l1">本品 · 釋檀相義第十九</span><span class="c11p6-l2">三事和合 · 本體論解構</span></span></button></div><div class="c11p6-modal" id="c11p6Modal" role="dialog" aria-modal="true" aria-label="全景總表"><div class="c11p6-card"><button class="c11p6-close" id="c11p6Close" type="button" aria-label="關閉">×</button><h3>卷十一·第六品 釋初品中檀相義第十九 · 全景總表</h3><p class="sub">卷十一・第六品｜檀名定義三事和合・淨不淨施・對治道品三十二相・破我破法・韋羅摩內外施</p><table class="c11p6-tbl"><caption>一、三段論證與檀之定義（本品主骨架）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>本品座標</td><td>卷十一首入六度別釋，第一度即「檀」——布施最易執「我（施者）、他（受者）、物（所施）」三者實有，故為中觀貫穿一切善行的鎖鑰</td></tr><tr><td>三段結構</td><td>先立後破、破而後成：前中觀邏輯（現象業果）→中觀核心邏輯（本體論解構）→後中觀邏輯（基於空性的菩薩行）</td></tr><tr><td>檀名定義</td><td>「<b>心相應善思，是名為檀</b>」；或言從善思起身口業；或言「有信、有福田、有財物，三事和合，心生捨法，能破慳貪」</td></tr><tr><td>三事和合</td><td>信＋福田＋財物三緣和合時，心生捨法破慳貪——如慈法觀眾生樂而心生慈，布施心數法亦三事和合而起</td></tr><tr><td>波羅蜜階梯</td><td>由「淨施→出世間檀→三輪體空→菩薩內外布施」層層遞進，確立完整的檀波羅蜜階梯</td></tr></tbody></table><table class="c11p6-tbl"><caption>二、前中觀邏輯·現象與業果</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>淨不淨施</td><td>不淨施：為求財、愧人、嫌責、畏懼、諍勝、名譽等而施；淨施：為道故施、清淨心生、無諸結使、不求今世後世報、恭敬憐愍</td></tr><tr><td>對治煩惱</td><td>布施時諸煩惱薄——不惜除慳、敬念除嫉、直心除諂、一心除調、觀德除不恭敬、慈愍除瞋、恭敬除憍慢、信果除邪見</td></tr><tr><td>相似道品</td><td>施時心生相似八正道（信果得正見……心住不散得正定），如是相似三十七道品善法於心中生</td></tr><tr><td>三十二相</td><td>布施為三十二相等福報之因——福報增進乃業果的「擴張變量」（發心、福田、財物、時節、恭敬等條件）</td></tr><tr><td>券要喻</td><td>淨施「乃至無量世世世不失，譬如券要終無失時」；布施果因緣和合時便有，如樹得時節便有華葉果實</td></tr></tbody></table><table class="c11p6-tbl"><caption>三、本體論解構與菩薩內外施（後中觀）</caption><thead><tr><th>環節</th><th>內容</th></tr></thead><tbody><tr><td>破我實有</td><td>施者主體「我」無自性——五眾和合假名為我，無有作者受者，破「我」這一布施所依的實有概念</td></tr><tr><td>破法實有</td><td>所施「物」亦無自性——一相無相、心無三礙；「世間檀／出世間檀」分判，出世間檀者三輪體空</td></tr><tr><td>三輪體空</td><td>施者空、受者空、施物空——不見有施者、受者、財物之相，是名出世間清淨檀（般若貫穿布施的極致）</td></tr><tr><td>外布施極致</td><td>韋羅摩本生——天文數字級的無執供養；福田之辨（淨居天勝於受供的魔王，關鍵在受者德與施者心）</td></tr><tr><td>內布施典範</td><td>釋迦本生不惜身命之內施——於空性地基上重立大悲，捨身命為最極致的菩薩檀</td></tr></tbody></table><p class="c11p6-note">第六品是龍樹對「布施波羅蜜」最完整的一次系統解構，走的是中觀「先立後破、破而後成」之路：先承認布施作為世俗善業的全套功德（淨不淨施、對治道品、三十二相），再以中觀解構其所依的「我」「法」實有，最後在空性地基上重立菩薩內外布施的最高典範。<b>三事和合而心生捨、三輪體空而施乃淨</b>——若連最具體的布施都不能被空性貫穿，「波羅蜜」便永停在世俗福德，無法成為般若的實踐。</p></div></div>
+<script id="wy-c11p6-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("c11p6Btn"),BOX=document.getElementById("c11p6Box"),MODAL=document.getElementById("c11p6Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=5;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+var FSEL="#videoFab,.video-fab,#vidFab,.vid-fab,#videoFab,#wyVideoBtn,#wyFab,#wy-fab,#vid-floating,#floatingYt,.video-fab,.wy-vbtn,.wy-video-fab,.floating-yt",_fab,_ft=false;
+function fab(){if(_fab&&_fab.isConnected)return _fab;if(_ft)return _fab;_ft=true;_fab=document.querySelector(FSEL);return _fab;}
+function place(){
+  var base=null,eb=document.querySelector(".wy-ebox");
+  if(eb){var r=eb.getBoundingClientRect();if(r.height>4)base=Math.round(window.innerHeight-r.top)+8;}
+  if(base===null){var fEl=fab();if(fEl){var fr=fEl.getBoundingClientRect(),st=getComputedStyle(fEl);if(fr.height>0&&st.display!=="none"&&st.visibility!=="hidden")base=Math.round(window.innerHeight-fr.top)+10;}}
+  if(base===null)base=78;
+  BOX.style.bottom=base+"px";
+}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="c11p6Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-C11P6:END-->
 </body>
 </html>
