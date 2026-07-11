@@ -1793,5 +1793,56 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH11P2:END-->
+<!--WY-BH11P3:BEGIN-->
+<style id="wy-bh11p3-css">
+.bh11p3-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh11p3-fabbox.show{display:block;}
+.bh11p3-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh11p3-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh11p3-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh11p3-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh11p3-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh11p3-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh11p3-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh11p3-modal.open{display:flex;}
+.bh11p3-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh11p3-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh11p3-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh11p3-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh11p3-close:hover{background:#dde2e6;}
+.bh11p3-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh11p3-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh11p3-tbl th,.bh11p3-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh11p3-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh11p3-tbl thead th:nth-child(1){width:32%;}.bh11p3-tbl thead th:nth-child(2){width:41%;}.bh11p3-tbl thead th:nth-child(3){width:27%;}
+.bh11p3-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh11p3-qa{font-family:"Noto Serif TC",serif;color:#3d4f2f;background:#eef2e2;letter-spacing:.3px;}
+.bh11p3-guan{background:#eef2f5;color:#37505f;}
+.bh11p3-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh11p3-tbl tbody tr:nth-child(even) td.bh11p3-guan{background:#e8eef2;}
+.bh11p3-tbl tbody tr:nth-child(even) td.bh11p3-qa{background:#e7ecdb;}
+.bh11p3-tbl b{color:#8b2500;}
+.bh11p3-guan b{color:#2f6b5a;}
+.bh11p3-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh11p3-note b{color:#8b2500;}
+@media(max-width:900px){.bh11p3-fabbox{right:14px;}.bh11p3-tbl{font-size:11px;}.bh11p3-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh11p3-fabbox" id="bh11p3Box"><button class="bh11p3-btn" id="bh11p3Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh11p3-ic">譯</span><span class="bh11p3-ls"><span class="bh11p3-l1">本品 · 原文·白話·中觀</span><span class="bh11p3-l2">白話翻譯表</span></span></button></div><div class="bh11p3-modal" id="bh11p3Modal" role="dialog" aria-modal="true"><div class="bh11p3-card"><button class="bh11p3-close" id="bh11p3Close" type="button" aria-label="關閉">×</button><h3>卷十一 · 第3品 白話翻譯表（鴿子因緣）</h3><p class="sub">大智度論卷十一·鴿子因緣 · 原文↔白話↔中觀概念 逐段對照</p><table class="bh11p3-tbl"><caption>鴿子因緣 · 原文｜白話翻譯｜中觀概念（共14段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh11p3-src">舍利弗白佛言：「世尊！菩薩摩訶薩云何欲以一切種知一切法，當習行般若波羅蜜？」</td><td>舍利弗對佛稟白：「世尊！菩薩摩訶薩要如何以一切種遍知一切法，應當如何修習般若波羅蜜？」</td><td class="bh11p3-guan"><b>由境轉問於道</b>——上一品已解「一切種」「一切法」為何物（境），此處舍利弗進一步追問「云何習行」（道），問題由「是什麼」轉向「如何修」，顯教法次第由認識境界進至實踐修證。</td></tr><tr><td class="bh11p3-qa">問曰：佛欲說般若波羅蜜故，種種現神變，現已即應便說，何以故令舍利弗問而後說？</td><td>問：佛既然想宣說般若波羅蜜，已經示現了種種神通變化，示現之後理應直接宣說，為何還要讓舍利弗發問之後才說呢？</td><td class="bh11p3-guan"><b>不徑直說之問</b>——質疑佛何不直說，逗出下文「問而後說，佛法應爾」的說法儀軌深意。</td></tr><tr><td class="bh11p3-qa">答曰：問而後說，佛法應爾。</td><td>答：先有請問、然後才宣說，這是佛法應有的儀軌。</td><td class="bh11p3-guan"><b>應機而說</b>——佛法非強加於人，須待根機成熟、主動叩問，方為契理契機之說，顯般若之教重在「感應道交」，非單方面灌輸。</td></tr><tr><td class="bh11p3-src">復次，舍利弗知般若波羅蜜甚深，微妙無相之法，難解難知。自以智力種種思惟：「若觀諸法無常，是般若波羅蜜耶？不是耶？」不能自了，以是故問。</td><td>再者，舍利弗深知般若波羅蜜是甚深、微妙、無相之法，難解難知。他以自己的智慧種種思惟：「如果只是觀諸法無常，這就是般若波羅蜜嗎？還是不是？」始終不能自行了悟，因此才發問。</td><td class="bh11p3-guan"><b>無常觀非即般若</b>——舍利弗自問「觀無常是否即般若」而不能自了，正顯般若「無相」超越一切有相觀法（含無常觀）；無常觀是趨向般若的階梯，卻非般若本身，般若更進一步，觀「無常」亦復性空。</td></tr><tr><td class="bh11p3-src">復次，舍利弗非一切智，於佛智慧中譬如小兒。</td><td>再者，舍利弗畢竟不是一切智者，相對於佛的智慧而言，就如同小孩一般。</td><td class="bh11p3-guan"><b>阿羅漢猶如小兒</b>——舍利弗雖是聲聞智慧第一，較之佛之一切種智，仍如小兒，顯智慧亦有量與圓滿之別，聲聞、菩薩、佛三乘智慧雖同源於般若，深廣仍有次第，不可一概而論。</td></tr><tr><td class="bh11p3-src">如說《阿婆檀那經》中：佛在祇洹住，晡時經行，舍利弗從佛經行。是時有鷹逐鴿，鴿飛來佛邊住，佛經行過之，影覆鴿上，鴿身安隱，怖畏即除，不復作聲。後舍利弗影到，鴿便作聲，戰怖如初。</td><td>正如《阿婆檀那經》中所說：佛住在祇洹精舍時，傍晚時分經行，舍利弗跟隨佛一起經行。這時有一隻老鷹追逐一隻鴿子，鴿子飛到佛的身邊躲避。佛經行走過牠身旁，佛的身影覆蓋在鴿子身上，鴿子當下安穩下來，怖畏頓時消除，不再發出驚叫。後來舍利弗的身影照到鴿子，鴿子卻又開始鳴叫，如最初一般驚恐戰慄。</td><td class="bh11p3-guan"><b>同為離欲者，覆影效驗迥異</b>——佛與舍利弗皆已離三毒，然一影覆而鴿安、一影覆而鴿懼，效驗懸殊；此公案正是全篇引子，逗出下文「習氣未盡」之理，說明果位雖同斷煩惱現行，習氣殘餘仍有精粗深淺之別。</td></tr><tr><td class="bh11p3-src">舍利弗白佛言：「佛及我身，俱無三毒，以何因緣佛影覆鴿，鴿便無聲，不復恐怖？我影覆上，鴿便作聲，戰慄如故？」</td><td>舍利弗對佛稟白：「佛與我自身，都已沒有貪瞋癡三毒，是什麼因緣，佛的身影覆蓋鴿子時，鴿子便安靜下來、不再恐懼？而我的身影覆蓋上去時，鴿子卻仍舊鳴叫戰慄如故呢？」</td><td class="bh11p3-guan"><b>斷惑未必斷習</b>——舍利弗以「俱無三毒」自居而生此問，恰恰暴露自己尚不能盡知「斷煩惱」與「斷習氣」的深細差別，是全公案「舍利弗非一切智」的具體印證。</td></tr><tr><td class="bh11p3-src">佛言：「汝三毒習氣未盡，以是故，汝影覆時恐怖不除。汝觀此鴿宿世因緣，幾世作鴿？」</td><td>佛說：「你的三毒習氣尚未斷盡，所以你的身影覆蓋牠時，牠的恐懼無法消除。你且觀察這隻鴿子過去世的因緣，牠已經做了幾世的鴿子？」</td><td class="bh11p3-guan"><b>習氣為佛與阿羅漢之分野</b>——佛直指「習氣未盡」為關鍵，此為大乘教理中阿羅漢與佛的根本差異所在：阿羅漢斷煩惱障之現行，而無始習氣的餘薰唯佛能盡除，此即「一切種智」不共二乘之處。</td></tr><tr><td class="bh11p3-src">舍利弗即時入宿命智三昧，觀見此鴿從鴿中來，如是一、二、三世，乃至八萬大劫，常作鴿身；過是已往，不能復見。舍利弗從三昧起，白佛言：「是鴿八萬大劫中，常作鴿身；過是已前，不能復知。」</td><td>舍利弗當下便入宿命智三昧，觀見這隻鴿子生生世世都是從鴿子投生而來，這樣一世、二世、三世，乃至八萬大劫，一直都是鴿身；再往前追溯，就無法看見了。舍利弗從三昧中出定，對佛稟白：「這隻鴿子在八萬大劫之中，都是鴿身；再往前的事，我便無法得知了。」</td><td class="bh11p3-guan"><b>神通有邊際</b>——舍利弗以宿命智三昧觀照，仍只能窮盡八萬大劫、無法再往前推知，顯聲聞神通雖不可思議，仍是「有量」之智，非佛的「無量」一切種智，量與無量之別，正是全品欲彰顯的核心對比。</td></tr><tr><td class="bh11p3-src">佛言：「汝若不能盡知過去世，試觀未來世，此鴿何時當脫？」</td><td>佛說：「你如果不能窮盡了知過去世，那就試著觀察未來世，這隻鴿子何時才能脫離鴿身？」</td><td class="bh11p3-guan"><b>轉向未來仍難窮盡</b>——佛引導舍利弗轉而觀未來，看似退一步降低難度，實則仍將暴露聲聞神通「雙向皆有邊際」的局限，前後呼應、加深論證。</td></tr><tr><td class="bh11p3-src">舍利弗即入願智三昧，觀見此鴿，一、二、三世，乃至八萬大劫，未脫鴿身；過是已往，亦不能知。從三昧起，白佛言：「我見此鴿從一世、二世、乃至八萬大劫，未免鴿身；過此已往，不復能知！我不知過去、未來齊限，不審此鴿何時當脫？」</td><td>舍利弗便入願智三昧，觀見這隻鴿子在一世、二世、三世乃至八萬大劫之中，都尚未脫離鴿身；再往後推，也無法得知。從三昧中出定，對佛稟白：「我看見這隻鴿子從一世、二世乃至八萬大劫，都未能脫離鴿身；再往後的事，我便無法知曉了！我既不知過去的齊限，也不知未來的齊限，實在不能斷定這隻鴿子何時才能脫離鴿身。」</td><td class="bh11p3-guan"><b>過去未來皆有量</b>──舍利弗以宿命智觀過去、願智觀未來，兩頭皆止於八萬大劫而不能再進，前後對稱地印證聲聞神通觀照力「過去未來俱有齊限」，唯佛之一切種智能雙向無礙、盡未來際。</td></tr><tr><td class="bh11p3-src">佛告舍利弗：「此鴿除諸聲聞、辟支佛所知齊限，復於恒河沙等大劫中常作鴿身，罪訖得出。輪轉五道中，後得為人，經五百世中，乃得利根。是時有佛，度無量阿僧祇眾生，然後入無餘涅槃。遺法在世，是人作五戒優婆塞，從比丘聞讚佛功德，於是初發心，願欲作佛。然後於三阿僧祇劫，行六波羅蜜，十地具足，得作佛，度無量眾生已而入無餘涅槃。」</td><td>佛告訴舍利弗：「這隻鴿子，除了超出聲聞、辟支佛所能了知的齊限之外，還要在恆河沙數那樣多的大劫中，持續作鴿身，罪報受盡才能脫離。之後在五道中輪轉，後來才得以投生為人，又經過五百世，才得到聰利的根性。那時世間有佛出世，度化無量阿僧祇眾生後，入無餘涅槃。佛的遺法還留存於世，這個人便受持五戒成為優婆塞，從比丘口中聽聞讚歎佛的功德，因此初發心，發願要成佛。此後歷經三大阿僧祇劫，修行六波羅蜜，十地功德具足，終於成佛，度化無量眾生後，入無餘涅槃。」</td><td class="bh11p3-guan"><b>因果歷歷·無一劫虛度</b>──佛為舍利弗盡數這隻鴿子累劫的因果流轉，從畜生道到人道、從初發心到三大阿僧祇劫修行成佛，因果絲毫不爽、層層相續，正是「一切種智」洞見一切因緣始末而無遺漏的具體展示，對比聲聞神通的「有齊限」，此即全篇論證的高潮。</td></tr><tr><td class="bh11p3-src">是時，舍利弗向佛懺悔，白佛言：「我於一鳥尚不能知其本末，何況諸法！我若知佛智慧如是者，為佛智慧故，寧入阿鼻地獄受無量劫苦，不以為難。」</td><td>這時，舍利弗向佛懺悔，稟白佛說：「我對於一隻鳥的過去未來尚且不能徹底了知，何況一切諸法呢！我若早知道佛的智慧是如此深廣，就算為了求得這樣的佛智慧，寧可墮入阿鼻地獄受無量劫的痛苦，我也不以為艱難。」</td><td class="bh11p3-guan"><b>謙悔即是最深的敬信</b>──舍利弗由此公案徹底折服，發願寧入地獄亦要求佛智，此謙悔正是全篇「舍利弗非一切智」主題的圓滿收束，亦呼應〈舍利弗因緣〉品中「智慧第一」之尊者尚且如此謙卑，反顯般若智慧之深廣無涯，不可思議。</td></tr><tr><td class="bh11p3-src">如是等，於諸法中不了故問。</td><td>像這一類的情形，都是因為（舍利弗）對於諸法還有不能了達之處，所以才發問。</td><td class="bh11p3-guan"><b>問即修證之始</b>──全品以「舍利弗因不了而問」作結，呼應品初「云何欲以一切種知一切法」之問，首尾相扣；正因不了而問，正因問而漸次趨入般若，顯「問」本身即是修行般若的起點，非徒為知識性的好奇。</td></tr></tbody></table><p class="bh11p3-note">卷十一第3品「鴿子因緣」原文·白話·中觀三欄對照，述《阿婆檀那經》佛影覆鴿、舍利弗影覆鴿仍怖之公案，顯阿羅漢習氣未盡、非一切智。白話忠於原意、不增不減；中觀欄標出各段所涉之義理。</p></div></div>
+<script id="wy-bh11p3-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh11p3Btn"),BOX=document.getElementById("bh11p3Box"),MODAL=document.getElementById("bh11p3Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=2;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var z=document.getElementById("c11p3Box"),eb=document.querySelector(".wy-ebox"),b=null;if(z){var r=z.getBoundingClientRect();if(r.height>4)b=Math.round(window.innerHeight-r.top)+8;}if(b===null&&eb){var r2=eb.getBoundingClientRect();if(r2.height>4)b=Math.round(window.innerHeight-r2.top)+8;}if(b!==null)BOX.style.bottom=b+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh11p3Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH11P3:END-->
 </body>
 </html>
