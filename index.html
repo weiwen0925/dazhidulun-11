@@ -1895,5 +1895,56 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classL
 upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
 })();</script>
 <!--WY-BH11P4:END-->
+<!--WY-BH11P5:BEGIN-->
+<style id="wy-bh11p5-css">
+.bh11p5-fabbox{position:fixed;right:22px;bottom:150px;z-index:123;display:none;}
+.bh11p5-fabbox.show{display:block;}
+.bh11p5-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Noto Sans TC",sans-serif;letter-spacing:.5px;color:#f7ecd2;background:linear-gradient(135deg,#4a5a68,#232d36);padding:8px 15px;border-radius:22px;border:1px solid rgba(150,180,205,.55);box-shadow:0 4px 16px rgba(0,0,0,.32);cursor:pointer;opacity:.96;transition:opacity .3s,transform .2s,box-shadow .2s;}
+.bh11p5-btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 6px 22px rgba(120,160,200,.5);}
+.bh11p5-ic{font-size:15px;line-height:1;color:#bcd4ea;}
+.bh11p5-ls{display:flex;flex-direction:column;align-items:flex-start;line-height:1.22;}
+.bh11p5-l1{font-size:10.5px;font-weight:500;opacity:.82;white-space:nowrap;}
+.bh11p5-l2{font-size:13px;font-weight:700;color:#eef4fa;white-space:nowrap;}
+.bh11p5-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;background:rgba(22,26,30,.6);padding:16px;}
+.bh11p5-modal.open{display:flex;}
+.bh11p5-card{position:relative;background:#fbf7ee;max-width:1080px;width:100%;max-height:90vh;overflow:auto;border:1px solid #d3cdbf;border-radius:14px;padding:28px 22px 20px;box-shadow:0 18px 50px rgba(0,0,0,.4);}
+.bh11p5-card h3{margin:0 0 2px;font-family:"Noto Serif TC",serif;font-size:20px;color:#3f5160;}
+.bh11p5-card .sub{margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-size:12.5px;color:#5b6b78;}
+.bh11p5-close{position:absolute;top:12px;right:16px;width:34px;height:34px;border:none;border-radius:50%;background:#eceef0;color:#3f5160;font-size:22px;line-height:1;cursor:pointer;z-index:2;}
+.bh11p5-close:hover{background:#dde2e6;}
+.bh11p5-tbl{width:100%;border-collapse:collapse;font-size:12.8px;margin:.2em 0 1em;}
+.bh11p5-tbl caption{font-family:"Noto Serif TC",serif;font-weight:700;color:#3f5160;font-size:14px;text-align:left;margin:.4em 0 .5em;}
+.bh11p5-tbl th,.bh11p5-tbl td{border:1px solid #d8d2c4;padding:.5em .65em;text-align:left;vertical-align:top;line-height:1.72;}
+.bh11p5-tbl thead th{background:#3f5160;color:#eef4fa;font-weight:700;position:sticky;top:0;}
+.bh11p5-tbl thead th:nth-child(1){width:32%;}.bh11p5-tbl thead th:nth-child(2){width:41%;}.bh11p5-tbl thead th:nth-child(3){width:27%;}
+.bh11p5-src{font-family:"Noto Serif TC",serif;color:#5a4636;background:#f6efe0;letter-spacing:.3px;}
+.bh11p5-qa{font-family:"Noto Serif TC",serif;color:#3d4f2f;background:#eef2e2;letter-spacing:.3px;}
+.bh11p5-guan{background:#eef2f5;color:#37505f;}
+.bh11p5-tbl tbody tr:nth-child(even) td{background:#faf6ee;}
+.bh11p5-tbl tbody tr:nth-child(even) td.bh11p5-guan{background:#e8eef2;}
+.bh11p5-tbl tbody tr:nth-child(even) td.bh11p5-qa{background:#e7ecdb;}
+.bh11p5-tbl b{color:#8b2500;}
+.bh11p5-guan b{color:#2f6b5a;}
+.bh11p5-note{font-size:12px;color:#4a5560;line-height:1.95;background:#eef2f5;border-left:3px solid #7f9cb5;border-radius:0 6px 6px 0;padding:11px 14px;margin:2px 0 0;}
+.bh11p5-note b{color:#8b2500;}
+@media(max-width:900px){.bh11p5-fabbox{right:14px;}.bh11p5-tbl{font-size:11px;}.bh11p5-card{padding:22px 12px 14px;}}
+</style>
+<div class="bh11p5-fabbox" id="bh11p5Box"><button class="bh11p5-btn" id="bh11p5Btn" type="button" aria-label="開啟白話翻譯表"><span class="bh11p5-ic">譯</span><span class="bh11p5-ls"><span class="bh11p5-l1">本品 · 原文·白話·中觀</span><span class="bh11p5-l2">白話翻譯表</span></span></button></div><div class="bh11p5-modal" id="bh11p5Modal" role="dialog" aria-modal="true"><div class="bh11p5-card"><button class="bh11p5-close" id="bh11p5Close" type="button" aria-label="關閉">×</button><h3>卷十一 · 第5品 白話翻譯表（讚檀波羅蜜義）</h3><p class="sub">大智度論卷十一·讚檀波羅蜜義 · 原文↔白話↔中觀概念 逐段對照</p><table class="bh11p5-tbl"><caption>讚檀波羅蜜義 · 原文｜白話翻譯｜中觀概念（共13段）</caption><thead><tr><th>原文</th><th>白話翻譯</th><th>中觀概念</th></tr></thead><tbody><tr><td class="bh11p5-qa">問曰：檀有何等利益故，菩薩住般若波羅蜜中，檀波羅蜜具足滿？</td><td>問：布施究竟有什麼樣的利益，使得菩薩安住在般若波羅蜜之中時，檀波羅蜜能夠圓滿具足呢？</td><td class="bh11p5-guan"><b>由利益問轉入義理</b>——品題「讚檀波羅蜜義」由此問開展：先問布施之「利益」（果），再層層推至「住般若中方能具足滿」之「理」（因），是全品由淺入深的入口。</td></tr><tr><td class="bh11p5-qa">答曰：檀有種種利益：</td><td>答：布施有種種利益：</td><td class="bh11p5-guan"><b>總標，下文分述</b>——一句總起，引出下文長串排比句，是大智度論常見「先總後別」的論述格式。</td></tr><tr><td class="bh11p5-src">檀為寶藏，常隨逐人；檀為破苦，能與人樂；檀為善御，開示天道；檀為善府，攝諸善人（施攝善人，與為因緣，故言「攝」）；檀為安隱，臨命終時心不怖畏；檀為慈相，能濟一切；檀為集樂，能破苦賊；檀為大將，能伏慳敵；檀為妙果，天人所愛；檀為淨道，賢聖所遊；檀為積善福德之門；檀為立事聚眾之緣；檀為善行愛果之種；檀為福業善人之相；檀破貧窮、斷三惡道；檀能全護福樂之果；檀為涅槃之初緣；入善人聚中之要法；稱譽讚歎之淵府；入眾無難之功德；心不悔恨之窟宅；善法道行之根本；種種歡樂之林藪；富貴安隱之福田；得道涅槃之津梁；聖人大士智者之所行；餘人儉德寡識之所效。</td><td>布施是寶藏，常常跟隨著人；布施能破除苦難，能給人帶來快樂；布施是良善的御者，為人開示通往天道之路；布施是善的府庫，能攝受眾多善人（布施能攝受善人、與人結為善緣，所以說「攝」）；布施使人安穩，臨命終時心中不生恐怖；布施具有慈心之相，能救濟一切眾生；布施能積聚快樂，能破除苦之賊害；布施如同大將，能降伏慳吝之敵；布施是美妙的果報，為天人所喜愛；布施是清淨之道，賢聖所遊履之處；布施是積累善根福德的門戶；布施是成辦事業、聚集眾人的因緣；布施是善行結出愛果的種子；布施是福業善人的標誌；布施能破除貧窮、斷除三惡道；布施能完整護持福樂的果報；布施是趣向涅槃的最初因緣；是進入善人聚集之處的要法；是受人稱譽讚歎的淵源府庫；是入於大眾之中而無困難的功德；是使心不生悔恨的安穩居所；是一切善法道行的根本；是種種歡樂聚集的林藪；是富貴安穩的福田；是得道涅槃的渡口橋梁；是聖人大士智者所奉行之事；也是其餘德行淺薄、識見寡少之人所應當效法的。</td><td class="bh11p5-guan"><b>排比鋪陳，總攝布施眾德</b>——以二十餘句排比句層層鋪陳布施的世間、出世間利益，從「寶藏」「破苦」直至「涅槃初緣」，由淺而深、由世間福報漸次收束至出世解脫，展現布施一法含攝人天、二乘、佛道諸果之廣大。</td></tr><tr><td class="bh11p5-src">復次，譬如失火之家，黠慧之人，明識形勢，及火未至，急出財物；舍雖燒盡，財物悉在，更修室宅。好施之人，亦復如是，知身危脆，財物無常，修福及時，如火中出物；後世受樂，亦如彼人更修宅業，福慶自慰。</td><td>再者，譬如家中失火時，聰明有智慧的人，能清楚看清情勢，趁火勢還未蔓延到之前，趕緊將財物搬出；房舍雖然燒盡，財物卻都保全下來，日後還能重新修築屋宅。喜好布施的人，也是如此，深知此身危脆、財物無常，把握時機及時修福，就像從火中搶救財物一樣；來世便能因此享受快樂，也如同那人重新修築屋宅一般，福報喜慶、自我寬慰。</td><td class="bh11p5-guan"><b>失火喻——無常中的智慧搶救</b>——以「明識形勢、及火未至急出財物」喻布施是對無常的智慧因應：身命財物終將壞滅，唯有及時布施才能將「財」轉化為不壞的「福」，恰是布施法「以有常之心，用無常之物」的最佳寫照。</td></tr><tr><td class="bh11p5-src">愚惑之人，但知惜屋，怱怱營救，狂愚失智，不量火勢，猛風絕焰，土石為焦，翕響之間，蕩然夷滅。屋既不救，財物亦盡，飢寒凍餓，憂苦畢世。慳惜之人，亦復如是，不知身命無常，須臾叵保，而更聚歛守護愛惜，死至無期，忽焉逝沒，形與土木同流，財與委物俱棄，亦如愚人憂苦失計。</td><td>愚癡迷惑的人，卻只知道顧惜房屋，慌慌張張地搶救，狂亂失智，不衡量火勢的猛烈，猛風烈焰之下，連土石都被燒焦，轉瞬之間便化為灰燼、蕩然無存。房屋既救不成，財物也全數燒盡，於是飢寒交迫，終身憂苦。慳吝愛惜財物的人，也是如此，不知道自己的身命無常、隨時難保，卻仍然一味聚斂守護、愛惜不捨，死期忽然到來，猝然而逝，身形與草木同歸塵土，財物也隨之棄置，正如那位愚人般，憂苦懊悔、計慮失當。</td><td class="bh11p5-guan"><b>愚人惜屋喻——慳吝者的雙重失落</b>——與上段「明識形勢」的智者恰成對照：愚人執著搶救終將燒盡的房屋本身，反而財屋兩失；慳吝者執著守護終將散壞的財物色身，命終時身財俱棄，兩相對照，凸顯布施正是以「捨」保全「不失」的辯證智慧。</td></tr><tr><td class="bh11p5-src">復次，大慧之人，有心之士，乃能覺悟，知身如幻，財不可保，萬物無常，唯福可恃，津通大道。</td><td>再者，具有大智慧、有志之士的人，才能夠有所覺悟，深知此身如幻，財物不可長久保有，萬物無常變滅，唯有福德才可依恃，是通往大道的渡口津梁。</td><td class="bh11p5-guan"><b>唯福可恃</b>——「身如幻、財不可保」是總攬前二喻（失火搶救、慳吝惜屋）的覺悟，唯有福德不隨身財散壞，是連結世間布施與出世大道的渡口，承上啟下。</td></tr><tr><td class="bh11p5-src">復次，大人大心，能大布施，能自利己；小人小心，不能益他，亦不自厚。</td><td>再者，胸襟宏大之人、發大心之人，才能行大布施，也才能真正利益自己；心量狹小之人，既不能利益他人，也無法使自己深厚增益。</td><td class="bh11p5-guan"><b>心量與布施成正比</b>——布施之「大小」實由發心之「大小」決定：大心能兼利自他，小心則自他兩失，暗示布施非徒財物多寡的計較，而是心量廣狹的映現。</td></tr><tr><td class="bh11p5-src">復次，譬如勇士見敵，必期吞滅；智人慧心，深得悟理，慳賊雖強，亦能挫之，必令如意。遇良福田，值好時節（時：應施之時也。遇而不施是名失時），覺事應心，能大布施。</td><td>再者，譬如勇士見到敵人，必定志在將其徹底消滅；有智慧的人深得覺悟之理，慳吝這個賊寇雖然強大，仍然能夠將其挫敗，必使布施之心如願成就。若能遇上良好的福田，又恰逢適當的時節（「時」，指應當布施的時機；遇到卻不布施，就叫作「失時」），事情與心念相應契合，便能成就廣大的布施。</td><td class="bh11p5-guan"><b>視慳貪如敵而挫伏之</b>——以「勇士見敵必滅」喻對治慳貪之心必須如臨大敵般堅決；「福田」與「時節」二者並提，說明布施的圓滿還須因緣具足，非徒發心而已，亦點出「失時」之戒。</td></tr><tr><td class="bh11p5-src">復次，好施之人，為人所敬，如月初出，無不愛者；好名善譽，周聞天下，人所歸仰，一切皆信。好施之人，貴人所念，賤人所敬；命欲終時，其心不怖。如是果報，今世所得，譬如樹華。大果無量，後世福也。生死輪轉，往來五道，無親可恃，唯有布施若生天上、人中，得清淨果，皆由布施；象、馬畜生得好櫪養，亦是布施之所得也。</td><td>再者，喜好布施的人，會受到他人的敬重，就像初升的月亮，沒有人不喜愛的；美名善譽，傳遍天下，人人歸心仰望，一切人都信服他。喜好布施的人，尊貴者會思念他，卑賤者會敬重他；臨命終時，他的心中也不生恐怖。像這樣的果報，是今生便能得到的，就好比樹木開花一般；而來世還有無量的大果，那才是真正的福報。眾生在生死之中輪轉，往來於五道之間，沒有任何親屬眷屬可以依恃，唯有布施可以依靠——無論投生天上、人中，能得清淨果報，都是由於布施所致；即使投生為象、馬等畜生，若能得到良好的槽廄豢養，也是布施所感得的結果。</td><td class="bh11p5-guan"><b>今世華、後世果</b>——以「樹華、大果」譬喻布施果報的今生與來世兩層次：今生得敬重美名如花初綻，來世得清淨大果方為究竟；更以「無親可恃唯有布施」點出生死輪轉中，布施是唯一能跨越五道、真實跟隨自己的資糧。</td></tr><tr><td class="bh11p5-src">布施之德，富貴歡樂；持戒之人，得生天上；禪智心淨，無所染著，得涅槃道。布施之福，是涅槃道之資糧也；念施故歡喜，歡喜故一心，一心觀生滅無常，觀生滅無常故得道。</td><td>布施的功德，能使人富貴歡樂；持戒之人，能夠往生天上；修習禪定智慧、心地清淨、無所染著者，能證得涅槃之道。布施的福德，正是通往涅槃之道的資糧；憶念布施而心生歡喜，因歡喜而心得專一，心念專一便能觀照生滅無常，觀照生滅無常便能因此得道。</td><td class="bh11p5-guan"><b>布施—歡喜—一心—得道的修證鏈</b>——揭示布施不僅是世間福報之因，更是一條通向出世得道的完整修證次第：施→喜→一心→觀無常→得道，將財施與慧觀緊密相扣，布施因此成為涅槃道的資糧而非僅止於人天福報。</td></tr><tr><td class="bh11p5-src">如人求蔭故種樹，或求華，或求果故種樹；布施求報亦復如是，今世、後世樂如求蔭，聲聞、辟支佛道如華，成佛如果。</td><td>就如同有人為了求得樹蔭而種樹，或是為了求花、為了求果而種樹；布施求取果報也是同樣的道理：求得今生、來世的安樂，就好比是求取樹蔭；求得聲聞、辟支佛之道，就好比是求取花朵；求得成佛，則好比是求取果實。</td><td class="bh11p5-guan"><b>種樹三喻總收全品</b>——以「蔭、華、果」三個層次總攝全篇布施利益：人天樂果如蔭（近而小）、二乘道果如華（中）、成佛如果（究竟大），一喻收束前文人天、涅槃、乃至成佛的層層果報，結構嚴謹，首尾圓融。</td></tr><tr><td class="bh11p5-qa">問曰：菩薩住般若波羅蜜中，檀波羅蜜為何必須具足滿？</td><td>問：菩薩安住在般若波羅蜜之中時，檀波羅蜜為什麼必須要圓滿具足呢？</td><td class="bh11p5-guan"><b>回扣品題核心問</b>——此問與品初「檀有何等利益故……檀波羅蜜具足滿」前後呼應，將討論由「布施利益」的鋪陳，收攏回「住般若中為何必須具足滿」的義理核心，準備進入下一品的正面解答。</td></tr><tr><td class="bh11p5-qa">答：不住空：若偏廢布施，則墮入二乘沉空滯寂，無以度眾生；不著有：若無般若引導，則布施淪為世間有漏福報，落入火宅輪迴。</td><td>答：一方面不可耽住於空：若因此偏廢布施之行，便會墮入二乘沉空滯寂的偏失，無法以此度化眾生；另一方面也不可執著於有：若布施缺乏般若智慧的引導，便會淪為世間有漏的福報，仍舊落於火宅輪迴之中。</td><td class="bh11p5-guan"><b>不住空、不著有——般若與布施相須而不相離</b>——以「不住空」「不著有」二句總結般若與檀波羅蜜必須相輔相成的道理：無般若則布施只是有漏人天福報，無布施則般若恐流於沉空滯寂，兩者相須方能成就菩薩不共二乘、不共凡夫的大乘布施波羅蜜。</td></tr></tbody></table><p class="bh11p5-note">卷十一第5品「讚檀波羅蜜義」原文·白話·中觀三欄對照，以寶藏、失火搶救、慳惜屋、種樹求蔭華果等喻，讚布施種種利益，並釋般若與檀波羅蜜何以相須不離、不住空不著有。白話忠於原意、不增不減；中觀欄標出各段所涉之義理。</p></div></div>
+<script id="wy-bh11p5-js">(function(){
+var CH=document.querySelectorAll("section.chapter");
+var BTN=document.getElementById("bh11p5Btn"),BOX=document.getElementById("bh11p5Box"),MODAL=document.getElementById("bh11p5Modal");
+if(!CH.length||!BTN||!BOX||!MODAL)return;
+var TARGET=4;
+function curIdx(){var lim=window.innerHeight*0.35,idx=-1;for(var i=0;i<CH.length;i++){if(CH[i].getBoundingClientRect().top<lim)idx=i;}return idx;}
+/*BHPLACE*/function place(){var z=document.getElementById("c11p5Box"),eb=document.querySelector(".wy-ebox"),b=null;if(z){var r=z.getBoundingClientRect();if(r.height>4)b=Math.round(window.innerHeight-r.top)+8;}if(b===null&&eb){var r2=eb.getBoundingClientRect();if(r2.height>4)b=Math.round(window.innerHeight-r2.top)+8;}if(b!==null)BOX.style.bottom=b+"px";}
+function upd(){place();BOX.classList.toggle("show",curIdx()===TARGET);}
+var tk=false;function onS(){if(!tk){tk=true;requestAnimationFrame(function(){tk=false;upd();});}}
+window.addEventListener("scroll",onS,{passive:true});window.addEventListener("resize",onS);
+BTN.addEventListener("click",function(){MODAL.classList.add("open");});
+MODAL.addEventListener("click",function(e){if(e.target===MODAL||e.target.id==="bh11p5Close")MODAL.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")MODAL.classList.remove("open");});
+upd();var c=0,iv=setInterval(function(){upd();if(++c>40)clearInterval(iv);},250);
+})();</script>
+<!--WY-BH11P5:END-->
 </body>
 </html>
